@@ -1,0 +1,24 @@
+<div class="table__wrapper">
+  <div class="table employee__table">
+    <div class="row__head employees">
+      <div class="row__item">ФИО</div>
+      <div class="row__item">Почта</div>
+      <div class="row__item">Номер телефона</div>
+      <div class="row__item">Дата рождения</div>
+      <div class="row__item">Зарплата</div>
+      <div class="row__item">Адрес работы</div>
+    </div>
+    <% @employees.each do |employee|%>
+      <div class="row employees">
+        <div class="row__item"><%= employee['full_name'] %></div>
+        <div class="row__item"><%= employee['email'] %></div>
+        <div class="row__item"><%= employee['phone_number'] %></div>
+        <div class="row__item"><%= employee['date_of_birth'] %></div>
+        <div class="row__item"><%= employee['salary'] %></div>
+        <div class="row__item"><%= employee['address'] %></div>
+
+      </div>
+    <% end %>
+  </div>
+  <%= button_to "Вернуться", root_path, method: "get", class: "sweet_button" %>
+</div>

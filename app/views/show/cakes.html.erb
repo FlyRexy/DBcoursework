@@ -1,0 +1,19 @@
+<div class="table__wrapper">
+  <div class="table">
+    <div class="row__head">
+      <div class="row__item">Название</div>
+      <div class="row__item">Рейтинг</div>
+      <div class="row__item">Цена</div>
+      <div class="row__item">Количество</div>
+    </div>
+    <% @cakes.each do |cake|%>
+      <div class="row">
+        <div class="row__item"><%= cake['name'] %></div>
+        <div class="row__item"><%= cake['average_rating'] %></div>
+        <div class="row__item"><%= cake['cost'] %>&#8381;</div>
+        <div class="row__item"><%= cake['amount'] %></div>
+      </div>
+    <% end %>
+  </div>
+  <%= button_to "Вернуться", root_path, method: "get", class: "sweet_button" %>
+</div>

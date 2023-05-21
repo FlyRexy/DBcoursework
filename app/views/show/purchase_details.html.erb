@@ -1,0 +1,23 @@
+<div class="table__wrapper">
+  <div class="table">
+    <div class="row__head pd">
+      <div class="row__item">Клиент</div>
+      <div class="row__item">Изделие</div>
+      <div class="row__item">Количество</div>
+      <div class="row__item">Цена</div>
+      <div class="row__item">Промежуточная стоимость</div>
+      <div class="row__item">Стоимость всей покупки</div>
+    </div>
+    <% @purchase_details.each do |detail|%>
+      <div class="row pd">
+        <div class="row__item"><%= detail['client'] %></div>
+        <div class="row__item"><%= detail['cake'] %></div>
+        <div class="row__item"><%= detail['am'] %></div>
+        <div class="row__item"><%= detail['cost'] %></div>
+        <div class="row__item"><%= detail['ic'] %></div>
+        <div class="row__item"><%= detail['total'] %></div>
+      </div>
+    <% end %>
+  </div>
+  <%= button_to "Вернуться", root_path, method: "get", class: "sweet_button" %>
+</div>

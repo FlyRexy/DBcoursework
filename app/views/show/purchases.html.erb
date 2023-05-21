@@ -1,0 +1,21 @@
+<div class="table__wrapper">
+  <div class="table">
+    <div class="row__head purchases">
+      <div class="row__item">Клиент</div>
+      <div class="row__item">Дата покупки</div>
+      <div class="row__item">Итоговая стоимость</div>
+      <div class="row__item">Сотрудник</div>
+      <div class="row__item">Способ оплаты</div>
+    </div>
+    <% @purchases.each do |purchase|%>
+      <div class="row purchases">
+        <div class="row__item"><%= purchase['client'] %></div>
+        <div class="row__item"><%= purchase['date'] %></div>
+        <div class="row__item"><%= purchase['total_cost'] %>&#8381;</div>
+        <div class="row__item"><%= purchase['emp'] %></div>
+        <div class="row__item"><%= purchase['payment_method'] %></div>
+      </div>
+    <% end %>
+  </div>
+  <%= button_to "Вернуться", root_path, method: "get", class: "sweet_button" %>
+</div>

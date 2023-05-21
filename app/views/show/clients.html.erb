@@ -1,0 +1,21 @@
+<div class="table__wrapper">
+  <div class="table">
+    <div class="row__head email">
+      <div class="row__item">ФИО</div>
+      <div class="row__item">Почта</div>
+      <div class="row__item">Номер телефона</div>
+      <div class="row__item">Дата рождения</div>
+      <div class="row__item">Статус</div>
+    </div>
+    <% @clients.each do |client|%>
+      <div class="row email">
+        <div class="row__item"><%= client['full_name'] %></div>
+        <div class="row__item"><%= client['email'] %></div>
+        <div class="row__item"><%= client['phone_number'] %></div>
+        <div class="row__item"><%= client['date_of_birth'] %></div>
+        <div class="row__item"><%= client['status'] %></div>
+      </div>
+    <% end %>
+  </div>
+  <%= button_to "Вернуться", root_path, method: "get", class: "sweet_button" %>
+</div>

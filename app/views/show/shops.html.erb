@@ -1,0 +1,21 @@
+<div class="table__wrapper">
+  <div class="table">
+    <div class="row__head">
+      <div class="row__item">Город</div>
+      <div class="row__item">Адрес</div>
+      <div class="row__item">Рейтинг</div>
+      <div class="row__item">Номер телефона</div>
+    </div>
+    <% @shops.each do |shop|%>
+      <div class="row">
+        <div class="row__item"><%= shop['city'] %></div>
+        <div class="row__item"><%= shop['address'] %></div>
+        <div class="row__item"><%= shop['rating'] %></div>
+        <div class="row__item"><%= shop['phone_number'] %></div>
+      </div>
+    <% end %>
+  </div>
+  <%= button_to "Вернуться", root_path, method: "get", class: "sweet_button" %>
+</div>
+
+
